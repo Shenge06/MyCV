@@ -1,131 +1,152 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <title>Nkululeko Buthelezi - Online CV</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <style>
     body {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      font-family: 'Arial', sans-serif;
-      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa; /* Light gray background */
       margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap; /* Allow columns to wrap to new row on smaller screens */
+      max-width: 1200px; /* Set maximum width */
+      margin: 0 auto; /* Center the content */
       padding: 20px;
+    }
+
+    .left-column,
+    .right-column {
+      flex: 1;
+      margin: 10px; /* Add space between columns */
+      background-color: #fff; /* White background for columns */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     }
 
     img {
       display: block;
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
+      margin: 0 auto 20px; /* Center the image and add space below */
       border-radius: 50%;
-      margin-right: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .bio {
-      flex: 1;
+      max-width: 200px;
+      height: auto;
     }
 
     h1 {
-      color: #333;
+      font-size: 24px;
       margin-bottom: 10px;
     }
 
     p {
-      color: #555;
-      line-height: 1.4;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
     }
 
     a {
-      color: #007BFF;
+      color: #007bff;
       text-decoration: none;
-      font-weight: bold;
     }
 
     a:hover {
       text-decoration: underline;
     }
 
-    .additional-content {
-      width: 100%;
-      max-width: 800px;
-      margin: 20px auto;
-    }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column; /* Stack columns vertically on smaller screens */
+      }
 
-    h1,
-    ul {
-      margin-top: 20px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin: 5px 0;
+      .left-column,
+      .right-column {
+        margin: 10px auto; /* Center columns */
+        width: 90%; /* Set column width to 90% */
+      }
     }
   </style>
 </head>
 
 <body>
-  <img src="{% static 'images/nkululeko_buthelezi(1).jpg' %}" alt="Photograph of Nkululeko Buthelezi">
-  <div class="bio">
-    <h1>Hello, I'm Nkululeko Buthelezi</h1>
-    <p>A self-motivated individual born and raised in Soweto, specifically in Zola.</p>
-    <p>I embrace the journey of learning and growth, acknowledging that mistakes are stepping stones to improvement.</p>
-    <p>My open-mindedness fuels my eagerness to learn, particularly in the realm of coding where I am currently focused on mastering Python.</p>
-    <p>For inquiries, you can reach me at:<br>
-      Cell: <strong>0814211148</strong><br>
-      Email: <strong>nkululekobuthelezi.shenge@gmail.com</strong></p>
-  </div>
+  <div class="container">
+    <div class="left-column">
+      <img src="images/nkululeko_buthelezi(1).jpg" alt="Photograph of Nkululeko Buthelezi">
+      <div class="bio">
+        <h1>Hello, I'm Nkululeko Buthelezi</h1>
+        <p>A self-motivated individual born and raised in Soweto, specifically in Zola.</p>
+        <p>I embrace the journey of learning and growth, acknowledging that mistakes are stepping stones to improvement.</p>
+        <p>My open-mindedness fuels my eagerness to learn, particularly in the realm of coding where I am currently focused on mastering Python.</p>
 
-  <div class="additional-content">
-    <h1>Projects</h1>
-    <p>Check out my coding projects on GitHub: <a href="https://github.com/your-username">HyperionDev Bootcamp Projects</a>.</p>
+        <!-- Inspiration -->
+      <h1>Inspiration</h1>
+      <p>What inspires me is the deep-seated desire to continually better myself, both for personal fulfillment and for the pride and admiration of my son. I am inspired to be a role model for him and to create a legacy that he can be proud of. Ultimately, my goal is to leverage my skills and experiences, combined with my ongoing education and work experience, to develop programs that significantly contribute to the well-being and growth of individuals and communities alike.</p>
+      <!-- End Inspiration -->
+      <p>
+        Please feel free to reach out to me via the following:
+      </p>
+      <p>
+        Cell: <strong>0814211148</strong><br>
+        Email: <strong>nkululekobuthelezi.shenge@gmail.com</strong>
+      </p>
+      </div>
+    </div>
+    <div class="right-column">
+      <!-- LinkedIn -->
+      <h1>LinkedIn</h1>
+      <p>Connect with me on LinkedIn: <a href="https://linkedin.com/in/nkululeko-buthelezi-208432183">Nkululeko Buthelezi</a>.</p>
+      <p>See my recent post about my software engineering bootcamp journey: <a href="https://linkedin.com/post-link">LinkedIn Post</a>.</p>
+      <!-- End LinkedIn -->
 
-    <h1>LinkedIn</h1>
-    <p>Connect with me on LinkedIn: <a href="https://linkedin.com/in/nkululeko-buthelezi-208432183">Nkululeko Buthelezi</a>.</p>
-    <p>See my recent post about my software engineering bootcamp journey: <a href="https://linkedin.com/post-link">LinkedIn Post</a>.</p>
-    <h1>Work Experience</h1>
-
-    <ul>
-      
-        <li><strong>Query Agent | RAM hand-to-hand couriers | July 2022 - Present:</strong> Excelled in providing customer service, collaborating with teams for prompt issue resolution.</li>
-        
-    
+      <!-- Work Experience -->
+      <h1>Work Experience</h1>
+      <ul>
+        <li><strong>Query Agent | RAM Hand-to-Hand Couriers | July 2022 - Present:</strong> Excelled in providing customer service, collaborating with teams for prompt issue resolution.</li>
       </ul>
       <p>My diverse background, including experience in customer service and team collaboration at RAM Hand-to-Hand Couriers, enhances my ability to understand and address the needs of various audiences, contributing meaningfully to collaborative projects.</p>
+      <!-- End Work Experience -->
 
-    <h1>Inspiration</h1>
-    <p>What inspires me is the deep-seated desire to continually better myself, both for personal fulfillment and for the pride and admiration of my son. I am inspired to be a role model for him and to create a legacy that he can be proud of. Ultimately, my goal is to leverage my skills and experiences, combined with my ongoing education and work experience, to develop programs that significantly contribute to the well-being and growth of individuals and communities alike.</p>
+      
 
-    <h1>Skills and Competencies</h1>
-    <ul>
-      
-      <li><strong>Python Programming:</strong> Proficient in Python with a solid understanding of fundamental programming concepts, data structures, and algorithms. Experienced in applying Python to develop efficient and scalable solutions for various coding challenges.</li>
-      <li><strong>Communication:</strong> Strong verbal and written communication skills.</li>
-      <li><strong>Attention to Detail:</strong> Paying close attention to details.</li>
-      <li><strong>Team Collaboration:</strong> Collaborating effectively with team members.</li>
-      <li><strong>Problem Solving:</strong> Analyzing and solving logistics-related problems.</li>
-      <li><strong>Continuous Learning:</strong> Proactively staying updated with the latest industry trends and technologies.</li>
-      <li><strong>Creative Thinking:</strong> Bringing innovative solutions to challenges.</li>
-    </ul>
-    <h1>Education</h1>
-    <ul>
-      
-        <li><strong>Software Engineering Bootcamp | HyperionDev Bootcamp | Present:</strong> Ongoing intensive training in various programming languages and tools.</li>
-        <li><strong>Electrical Engineering Certificates | Jeppe College | 2013:</strong>Earned N4 and N5 certificates, establishing a strong foundation in Electrical Engineering.</li>
-    
+      <!-- Skills and Competencies -->
+      <h1>Skills and Competencies</h1>
+      <ul>
+        <li><strong>Python Programming:</strong> Proficient in Python with a solid understanding of fundamental programming concepts, data structures, and algorithms. Experienced in applying Python to develop efficient and scalable solutions for various coding challenges.</li>
+        <li><strong>Communication:</strong> Strong verbal and written communication skills.</li>
+        <li><strong>Attention to Detail:</strong> Paying close attention to details.</li>
+        <li><strong>Team Collaboration:</strong> Collaborating effectively with team members.</li>
+        <li><strong>Problem Solving:</strong> Analyzing and solving logistics-related problems.</li>
+        <li><strong>Continuous Learning:</strong> Proactively staying updated with the latest industry trends and technologies.</li>
+        <li><strong>Creative Thinking:</strong> Bringing innovative solutions to challenges.</li>
       </ul>
-    <p></p>
-  </div>
-</body>
+      <!-- End Skills and Competencies -->
 
-</html>
+      <!-- Education -->
+      <h1>Education</h1>
+      <ul>
+        <li><strong>Software Engineering Bootcamp | HyperionDev Bootcamp | Present:</strong> Ongoing intensive training in various programming languages and tools.</li>
+        <li><strong>Electrical Engineering Certificates | Jeppe College | 2013:</strong> Earned N4 and N5 certificates, establishing a strong foundation in Electrical Engineering.</li>
+      </ul>
+      
+    </div>
+  </div>
+
+
