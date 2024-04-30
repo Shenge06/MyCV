@@ -1,148 +1,68 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Shopping</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <style>
-        /* Custom styles  */
-        .product {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .product img {
-            max-width: 100%;
-            height: auto;
-            max-height: 150px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .product img:hover {
-            transform: scale(1.1);
-        }
-
-        footer {
-            margin-top: 50px;
-        }
-
-        form {
-            max-width: 300px;
-            margin: 0 auto;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+  <title>Nkululeko Buthelezi - Online CV</title>
 </head>
-<body>
 
-<div class="container mt-5">
+<body>
+  <div class="container">
     <div class="row">
-        <!-- Product 1 - 10 -->
-        <div class="col-lg-4 product">
-            <img src='assets/images/image1.jpg' alt="Product 1">
-            <h4>Product 1</h4>
-            <p>R19.99</p>
-            <button class="btn btn-primary">Buy</button>
+      <div class="col-md-6">
+        <div class="bio">
+          <h1>Hello, I'm Nkululeko Buthelezi</h1>
+          <p>A self-motivated individual born and raised in Soweto, specifically in Zola.</p>
+          <p>I embrace the journey of learning and growth, acknowledging that mistakes are stepping stones to improvement.</p>
+          <p>My open-mindedness fuels my eagerness to learn, particularly in the realm of coding where I am currently focused on mastering Python.</p>
+          <p>For inquiries, you can reach me at:<br>
+            Cell: <strong>0814211148</strong><br>
+            Email: <strong>nkululekobuthelezi.shenge@gmail.com</strong></p>
         </div>
-        <div class="col-lg-4 product">
-            <img src='assets/images/image2.jpg' alt="Product 2">
-            <h4>Product 2</h4>
-            <p>R19.99</p>
-            <button class="btn btn-primary">Buy</button>
-        </div>
-        <div class="col-lg-4 product">
-            <img src='assets/images/image3.jpg' alt="Product 3">
-            <h4>Product 3</h4>
-            <p>R19.99</p>
-            <button class="btn btn-primary">Buy</button>
-        </div>
-        <div class="col-lg-4 product">
-            <img src='assets/images/image4.jpg' alt="Product 4">
-            <h4>Product 4</h4>
-            <p>R19.99</p>
-            <button class="btn btn-primary">Buy</button>
-        </div>
-        <div class="col-lg-4 product">
-            <img src='assets/images/image5.jpg' alt="Product 5">
-            <h4>Product 5</h4>
-            <p>R19.99</p>
-            <button class="btn btn-primary">Buy</button>
-        </div>
-        <div class="col-lg-4 product">
-            <img src='assets/images/image6.jpg' alt="Product 6">
-            <h4>Product 6</h4>
-            <p>R19.99</p>
-            <button class="btn btn-primary">Buy</button>
-        </div>
-        <div class="col-lg-4 product">
-            <img src='assets/images/image7.jpg' alt="Product 7">
-            <h4>Product 7</h4>
-            <p>R19.99</p>
-            <button class="btn btn-primary">Buy</button>
-        </div>
-        <div class="col-lg-4 product">
-            <img src='assets/images/image8.jpg' alt="Product 8">
-            <h4>Product 8</h4>
-            <p>R19.99</p>
-            <button class="btn btn-primary">Buy</button>
-        </div>
-        <div class="col-lg-4 product">
-            <img src='assets/images/image9.jpg' alt="Product 9">
-            <h4>Product 9</h4>
-            <p>R19.99</p>
-            <button class="btn btn-primary">Buy</button>
-        </div>
-        <div class="col-lg-4 product">
-            <img src='assets/images/image10.jpg' alt="Product 10">
-            <h4>Product 10</h4>
-            <p>R19.99</p>
-            <button class="btn btn-primary">Buy</button>
-        </div>
+      </div>
+      <div class="col-md-6 d-flex justify-content-end align-items-center">
+        <img class="profile-image" src="{% static 'images/nkululeko_buthelezi(1).jpg' %}" alt="Photograph of Nkululeko Buthelezi">
+      </div>
     </div>
 
-    <hr class="my-4">
+    <div class="additional-content">
+      <h1>Projects</h1>
+      <p>Check out my coding projects on GitHub: <a href="https://github.com/your-username">HyperionDev Bootcamp Projects</a>.</p>
 
-    <!-- Footer with form -->
-    <footer>
-        <div class="row">
-            <div class="col-lg-6">
-                <form>
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter your full name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email address">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number:</label>
-                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
-                    </div>
-                    <div class="form-group">
-                        <label for="address">Address:</label>
-                        <textarea class="form-control" id="address" rows="3" placeholder="Enter your address"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="billing">Billing Information:</label>
-                        <input type="text" class="form-control" id="billing" placeholder="Enter your billing information">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
-            <div class="col-lg-6">
-                <!-- Small company logo -->
-                <img src="assets/images/logo.jpg" alt="Company Logo" class="float-right" style="max-width: 100%; height: auto; max-height: 100px;">
-            </div>
-        </div>
-    </footer>
-</div>
+      <h1>LinkedIn</h1>
+      <p>Connect with me on LinkedIn: <a href="https://linkedin.com/in/nkululeko-buthelezi-208432183">Nkululeko Buthelezi</a>.</p>
+      <p>See my recent post about my software engineering bootcamp journey: <a href="https://linkedin.com/post-link">LinkedIn Post</a>.</p>
+      <h1>Work Experience</h1>
 
-<!-- Bootstrap JS and dependencies (jQuery) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-wEmIriEiwrxWPh6FJOha8f5YX7JFoJL5ykPNI3QYmPEmV0xByWT7RG7R7l5C9l6Z" crossorigin="anonymous"></script>
+      <ul>
+        <li><strong>Query Agent | RAM hand-to-hand couriers | July 2022 - Present:</strong> Excelled in providing customer service, collaborating with teams for prompt issue resolution.</li>
+      </ul>
+      <p>My diverse background, including experience in customer service and team collaboration at RAM Hand-to-Hand Couriers, enhances my ability to understand and address the needs of various audiences, contributing meaningfully to collaborative projects.</p>
 
+      <h1>Inspiration</h1>
+      <p>What inspires me is the deep-seated desire to continually better myself, both for personal fulfillment and for the pride and admiration of my son. I am inspired to be a role model for him and to create a legacy that he can be proud of. Ultimately, my goal is to leverage my skills and experiences, combined with my ongoing education and work experience, to develop programs that significantly contribute to the well-being and growth of individuals and communities alike.</p>
+
+      <h1>Skills and Competencies</h1>
+      <ul>
+        <li><strong>Python Programming:</strong> Proficient in Python with a solid understanding of fundamental programming concepts, data structures, and algorithms. Experienced in applying Python to develop efficient and scalable solutions for various coding challenges.</li>
+        <li><strong>Communication:</strong> Strong verbal and written communication skills.</li>
+        <li><strong>Attention to Detail:</strong> Paying close attention to details.</li>
+        <li><strong>Team Collaboration:</strong> Collaborating effectively with team members.</li>
+        <li><strong>Problem Solving:</strong> Analyzing and solving logistics-related problems.</li>
+        <li><strong>Continuous Learning:</strong> Proactively staying updated with the latest industry trends and technologies.</li>
+        <li><strong>Creative Thinking:</strong> Bringing innovative solutions to challenges.</li>
+      </ul>
+      <h1>Education</h1>
+      <ul>
+        <li><strong>Software Engineering Bootcamp | HyperionDev Bootcamp | Present:</strong> Ongoing intensive training in various programming languages and tools.</li>
+        <li><strong>Electrical Engineering Certificates | Jeppe College | 2013:</strong>Earned N4 and N5 certificates, establishing a strong foundation in Electrical Engineering.</li>
+      </ul>
+    </div>
+  </div>
 </body>
+
 </html>
